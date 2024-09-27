@@ -1,0 +1,869 @@
+---
+# title: "Misinformation und Fake News in den sozialen Medien"
+# author: "Jula Luehring"
+# date: "7. Oktober 2024"
+lang: de
+format: 
+  revealjs:
+    seal: false
+    transition: "slide"
+    theme: [default, custom.scss] #custom style file
+    # incremental: true
+    aspect-ratio: 16:9
+    slide-number: true
+    footer: julaluehring.github.io
+# title-slide-attributes:
+#     data-background-color: "#1f5c99"
+#     data-background-size: cover
+#     data-background-opacity: "0.5"
+logo: "logos/uni_wien_logo_blue.jpg"
+# editor: visual # visual editor
+---
+
+## Misinformation und Fake News in den Sozialen Medien
+
+### Einblicke in die interdisziplinäre Forschungslage
+
+<br>
+
+**Jula Lühring** <br> *Universität Wien & Complexity Science Hub* <br>
+
+VHS Schwerpunkt Demokratie am 7. Oktober 2024
+
+::: columns
+
+::: {.column width="25%"}
+
+![](logos/vhs-urania.png)
+:::
+
+::: {.column width="35%"}
+
+![](logos/wwtf.svg)
+
+:::
+
+:::
+
+# Vorstellung
+
+## Jula Lühring, M.Sc., B.A.
+
+::: columns
+::: {.column width="60%"}
+-   Studium in Bremen und Amsterdam
+-   Arbeit im Bereich der Demokratieförderung
+-   Doktorandin im Computational Communication Science Lab & Complexity Science Hub
+
+\
+Mail: [jula.luehring\@univie.ac.at](jula.luehring@univie.ac.at)
+
+:::
+
+::: {.column width="40%"}
+![](images/JL-bw.jpeg){width="400"}
+![](logos/logos-combined.png){width="800"}
+
+:::
+
+:::
+
+## Computational Communication Science?
+
+::: columns
+
+::: {.column width="50%"}
+
+
+**Theorie:** 
+
+Kommunikationswissenschaft, 
+Psychologie, Soziologie
+
+<br>
+
+**Methodik:** 
+
+Informatik, Physik
+
+<br>
+
+### $\rightarrow$ interdisziplinär!
+
+:::
+
+::: {.column width="50%"}
+![](images/css-dalle.png){width="400"}
+
+
+:::
+
+:::
+
+::: notes
+Haben Sie schon einmal von Computational Social Science gehört?
+Wir stellen sozialwissenschaftliche Fragen, aber nutzen in der Regel Methoden der Informatik oder der Physik um sie zu beantworten.
+D.h., wir fragen uns jetzt: wie verbreitet ist Misinformation?
+Und anstatt von Umfragen oderaber zusätzlich dazu, verfolgen wir dann computergestützte Ansätze und analysieren Social Media-Daten
+Und wenn wir uns fragen, wie wir die Verbreitung von Misinformation eindämmen können, dann programmieren wir Computersimulationen, in denen wir Interventionen testen können
+:::
+
+## Misinformation
+
+::: columns
+::: {.column width="50%"}
+
+![](images/dalle-misinformation-network.png){width="1000"}
+
+:::
+
+::: {.column width="50%"}
+
+<br>
+
+$\rightarrow$ Psychologie
+
+$\rightarrow$ Informatik
+
+$\rightarrow$ Kommunikations- und Medienwissenschaften
+
+$\rightarrow$ Soziologie
+
+$\rightarrow$ Politikwissenschaften
+
+:::
+
+:::
+
+
+# Was ist Misinformation?
+
+## Im Kontext der "Information Disorder"
+
+::: columns
+::: {.column width="60%"}
+![Wardle & Derakhshan, 2017](images/disorder-sci-american.png){width="500"}
+:::
+
+::: {.column width="40%"}
+-   Trennung von Mis- und Desinformation
+
+-   Fake News als Subtyp von Desinformation
+
+-   Fokus auf Schädlichkeit
+:::
+:::
+
+::: fragment
+### Misinformation = unwahre Informationen ohne bestimmte Intention
+:::
+
+::: notes
+-   Laut der Definition von den Autor:innen sind Mis- und Desinformation zwei verschiedene Oberbegriffe für Falschnachrichten, die aber mit Malinformation, also Hassrede überlappen
+
+-   Ich mag diese Definition weil sie einen Fokus auf Schädlichkeit liegt: Information kann falsch sein und keinen Schaden anrichten, aber auch richtig aber hasserfüllt sein und großen Schaden anrichten
+
+-   Trotz der Trennung wird der Begriff Misinformation in der Praxis eher als Oberbegriff verwendet, in der Forschung ist es oft schwer die Intention festzustellen
+
+-   Hier wird Misinformation in der Regel als unwahre oder falsche Informationen bezeichnet, die keine bestimmte Intention hat
+:::
+
+## Subtypen
+
+
+-   Zwei Dimensionen: Intention vs. Wahrheitsgehalt
+
+![Tandoc et al., 2018](images/Tandoc-Table.png){width="600"}
+
+::: fragment
+$\rightarrow$ Aber: Fake News inzwischen eher ein politisiertes Buzzword!
+:::
+
+::: notes
+-   Nach der Definition der Autor:innen können verschiedene Typen von Misinformation anhand der Intention und des Wahrheitsgehalts geclustered werden
+
+-   Hier werden Formen wie Satire und Parodien mit einbegriffen, aber auch Pseudojournalismus und Werbung, die oft ökonomischen Interessen folgen
+
+-   Tatsächlich gibt es aber auch sehr viele Formen in der Mitte: dekontextualisierte Informationen und die meisten Meinungsartikel
+
+-   Fake News eher ein politisches Schlachtwort 
+:::
+
+## Wie sieht das in der Praxis aus?
+
+Beispiel 1: Unüberprüftes Teilen von Informationen
+
+![](images/ronaldo.png){width="700"}
+
+$\rightarrow$ unabsichtliche Fehler
+
+## Wie sieht das in der Praxis aus?
+
+Beispiel 2: Falsche Zeugenaussagen
+
+![](images/bildzeitung.jpeg){width="700"}
+
+$\rightarrow$ dekontextualisierende Interpretationen
+
+## Wie sieht das in der Praxis aus?
+
+Beispiel 3: Pseudojournalismus
+
+![](images/voice-of-europe.png){width="700"}
+
+$\rightarrow$ politisch motivierte Desinformationskampagnen
+
+# Wie verbreitet ist Misinformation? 
+
+## Was denken Sie? 
+
+<iframe src="https://directpoll.com/r?XDbzPBd3ixYqg8rOX3K9r2J69o3GB801o3SnxjBq9aNnW" width="800px" height="600px">
+
+</iframe>
+
+
+## So denken andere darüber:
+
+![](images/WEF-wide.png){width="594"}
+
+::: notes
+-   Das Weltwirtschaftsforum hat gerade wieder Mis- und Desinformation als aktuell größtes global Risiko ernannt
+
+-   Dieses Ranking baut auf Umfragen auf, und spiegelt die aktuelle Wahrnehmung von Misinformation wider
+
+-   Wir beleuchten das heute mal ein bisschen nuancierter
+:::
+
+# Realitätscheck
+
+
+## Wie verbreitet ist Misinformation?
+
+![Altay et al., 2022](images/altay-spread.png){width="600"}
+
+\
+
+**[1-6%](https://journalqd.org/article/view/3617) in 5 Studien von 2016-2019**
+
+$\rightarrow$ kleiner Anteil des Nachrichtenkonsums
+
+::: fragment
+
+### $\rightarrow$ im Durschnitt gewinnen gute Nachrichten!
+
+:::
+
+::: footer
+Allcott & Gentzkow, [2017](https://pubs.aeaweb.org/doi/10.1257/jep.31.2.211); Allen et al., [2020](https://doi.org/10.1126/sciadv.aay3539); Altay et al., [2022](https://journalqd.org/article/view/3617); Guess et al., [2020](https://www.nature.com/articles/s41562-020-0833-x)
+:::
+
+::: notes
+-   Wenn wir uns die Verbreitung von Misinformation anschauen, dann wird aber alles was ich eben gesagt habe stark relativiert
+-   Misinformation erreicht im Schnitt nur 1 bis 6% der Gesellschaften und zuverlässige Informationen sind weiter verbreitet
+-   Auf vielen Plattformen ist der Großteil des Contents nicht mal politisch, sondern Pornos
+-   Hier in dem Schaubild sieht mans für die USA wo grün gute und rot falsche Informationen sind
+-   Und die USA sind tatsächlich auch ein Fall, der immer als schlimmes Beispiel angeführt wird
+-   Eine Studie hat auch gezeigt, dass in Deutschland, Frankreich, den USA, und Großbritannien während der Pandemie mehr und mehr auf zuverlässige Quellen zurückgegriffen wurde
+-   Und auch das Vertrauen in die Medien hat in Deutschland zu der Zeit etwas zugenommen
+:::
+
+
+
+## Und in den sozialen Medien? 
+
+-   Minderheit der User teilt Großteil der Falschinformation:
+    -   1% User teilen 75% [(2018-2019, USA)](https://www.doi.org/10.1017/S0003055421000290)
+    -   5% User teilen 50% [(2016, USA)](https://www.sciencemag.org/lookup/doi/10.1126/science.aau2706)
+    -   2% machen 75% Website-Visits aus [(2022, Deutschland)](https://doi.org/10.1080/10584609.2024.2325426)
+-   Falschinformation überlappt mit [Hassrede](https://doi.org/10.1093/pnasnexus/pgae111)
+
+::: footer
+Brennen et al., [2020](https://reutersinstitute.politics.ox.ac.uk/types-sources-and-claims-covid-19-misinformation); Grinberg et al., [2019](https://doi.org/10.1126/science.aau2706); Osmundsen et al., [2021](https://www.cambridge.org/core/journals/american-political-science-review/article/abs/partisan-polarization-is-the-primary-psychological-motivation-behind-political-fake-news-sharing-on-twitter/3F7D2098CD87AE5501F7AD4A7FA83602); Robertson et al., [2023](https://www.nature.com/articles/s41586-023-06078-5); Törnberg, [2022](https://www.pnas.org/doi/10.1073/pnas.2207159119)
+:::
+
+::: notes
+-   Wir sehen also auch in den sozialen Medien, dass nur 1% der User:innen den Großteil an Misinformation teilt
+-   Das sind oft Politiker:innen selbst oder extreme Superspreader
+-   Hier wiederholt sich also die Frage: Sind das wirklich die Algorithmen oder ist das ein Eliten-Problem, das wir auch offline haben?
+-   eine tief philosophische Frage die schwer empirisch zu messen ist 
+:::
+
+## Wer verbreitet Misinformation?
+
+### 1. Politiker 
+
+-   Politiker teilen 20% der Fehlinformation.
+-   Diese [20% verursachen 69% des Engagement](https://reutersinstitute.politics.ox.ac.uk/types-sources-and-claims-covid-19-misinformation) mit Fehlinformation auf Social Media.
+
+![](images/afd_mimikama.png)
+
+::: footer
+Brennen et al. [2020](https://reutersinstitute.politics.ox.ac.uk/types-sources-and-claims-covid-19-misinformation); Mimikama [2024](https://www.mimikama.org/windenergie-in-frankreich-wirklich-gestoppt/)
+:::
+
+## Wer verbreitet Misinformation? 
+
+### 2. Sehr aktive, extreme User
+
+::: columns
+::: {.column width="50%"}
+![](https://peoplesdispatch.org/wp-content/uploads/2021/01/trump-capitol-2.jpg){width="400"}
+
+-   [politisch Motivierte](https://www.doi.org/10.37016/mr-2020-119) mit extremen Einstellungen
+-   [Auch offline feindselig](https://www.doi.org/10.1017/S0003055421000885), online sichtbarer
+:::
+
+::: {.column width="50%"}
+
+### Warum?
+
+-   Verlust von Status & Privileg
+-   Frustration im echten Leben
+-   Kein Vertrauen in Institutionen
+-   Keine Repräsentation
+
+::: fragment
+### $\rightarrow$ Mensch oder Algorithmus?
+:::
+
+:::
+:::
+
+
+
+::: footer
+Altay et al. [2023](https://www.doi.org/10.37016/mr-2020-119); Bor & Petersen [2022](https://www.doi.org/10.1017/S0003055421000885)
+:::
+
+::: notes
+-   Reale Probleme
+    -   Geschlechterkampf
+    -   Autos als Status Symbole
+    -   Globalisierung
+    -   Ökonomische Ungleichheit [Wohnungsmarkt](https://www.semafor.com/newsletter/04/30/2024/semafor-flagship-blood-and-soil?utm_source=newslettershare&utm_medium=flagship&utm_campaign=flagshipnumbered5#f)
+:::
+
+## Sind digitale Echokammern Schuld?
+::: columns
+::: {.column width="30%"}
+![](https://cdn.pixabay.com/photo/2017/01/13/19/40/family-1978106_1280.png)
+:::
+
+::: {.column width="70%"}
+-   Echokammern: offline [stärker](https://doi.org/10.1093/qje/qjr044) als online
+-   [Ausmaß](https://www.nature.com/articles/s41586-023-06297-w) variiert stark
+    -   **20.6%** Facebook User: **75%** der Posts aus gleichgesinnten Quellen
+    -   **23.1%**: unter **25%** der Posts
+-   Algorithmen: kleiner (6%) & viel weniger starker [Einfluss](https://www.science.org/doi/full/10.1126/science.aaa1160) als soziales Netzwerk
+-   [Gruppen & Pages](https://www.science.org/doi/10.1126/science.ade7138): stark segregiert
+:::
+:::
+
+::: footer
+Gentzkow & Shapiro, [2011](https://doi.org/10.1093/qje/qjr044); Bakshy et al. [2015](https://www.science.org/doi/full/10.1126/science.aaa1160); Nyhan et al., [2023](https://www.nature.com/articles/s41586-023-06297-w); Gonzalez-Bailon et al., [2023](https://www.science.org/doi/10.1126/science.ade7138)
+:::
+
+::: notes
+-   Kontakt mit andersartigen Sichtweisen online Echo Kammer, Lücke zwischen Conservativ/Liberal im Besuchen konservativer Seiten: (7.5%, Gentzkow Shapiro 2011), Gonzalez Bailon: 35%
+-   Unterschied Rep./Dem. für Rep. Inhalte (USA): [7.5%](https://doi.org/10.1093/qje/qjr044)-[35%](https://www.science.org/doi/10.1126/science.ade7138)
+:::
+
+## Können wir Algorithmen für schuldig erklären? 
+
+Facebook [Studie](https://www.nature.com/articles/s41586-023-06297-w): Down-Ranking von gleichgesinnten Posts
+
+![](images/Nyhan_2023.svg)
+
+::: footer
+Nyhan et al., [2023](https://www.nature.com/articles/s41586-023-06297-w)
+:::
+
+## Algorithmus: Down-Ranking gleichgesinnter Quellen
+
+![](images/Nyhan_2023_results_Fig3_a_d.svg){.r-stretch}
+
+-   Ähnliche Ergebnisse in 2 weiteren Studien: <br> [Kein Algorithmus](https://www.science.org/doi/full/10.1126/science.abp9364) oder [keine Re-Shares](https://www.science.org/doi/10.1126/science.add8424)
+
+::: footer
+Nyhan et al., [2023](https://www.nature.com/articles/s41586-023-06297-w); Guess et al., [2023](https://www.science.org/doi/full/10.1126/science.abp9364); Guess et al., [2023](https://www.science.org/doi/10.1126/science.add8424)
+:::
+
+::: notes
+Schimpfworte etc. Reduction: from 0.034% to 0.030% for content with slur words from 3.15% to 2.81% for uncivil content from 0.76% to 0.55% for content from misinformation repeat offenders
+:::
+
+## Algorithmen & Radikalisierungspiralen?
+
+-   Einfluss von [Google's Algorithmus](https://www.nature.com/articles/s41586-023-06078-5) auf Ergebnisse: Suchworte haben viel stärkeren Effekt
+
+![](images/google.png)
+
+-   YouTube: Algorithmus führt zu [weniger radikalem Konsum](https://www.pnas.org/doi/abs/10.1073/pnas.2313377121)
+-   Klicks für radikale Videos: von [außerhalb der Platform](https://doi.org/10.1177/1940161220964767)
+-   [User Präferenzen](https://www.pnas.org/doi/abs/10.1073/pnas.2101967118) bestimmen Views von radikalen Videos
+
+$\rightarrow$ User suchen aktiv gleichgesinnte Inhalte
+
+::: footer
+Robertson et al., [2023](https://www.nature.com/articles/s41586-023-06078-5); Hosseinmardi et al., [2024](https://www.pnas.org/doi/abs/10.1073/pnas.2313377121); Hosseinmardi et al., [2021](https://www.pnas.org/doi/abs/10.1073/pnas.2101967118); Munger & Philipps, [2022](https://doi.org/10.1177/1940161220964767)
+:::
+
+## Echokammern reduzieren? Keine gute Idee.
+
+-   Politische Polarisierung in den USA ([Studie 2017](https://www.pnas.org/content/115/37/9216))
+
+::: columns
+::: {.column width="50%"}
+![](images/bail_design.svg)
+:::
+
+::: {.column width="50%"}
+-   Posts von Meinungsführern der anderen Partei
+-   Einstellungen wurden extremer, besonders in Republikanern
+-   Extreme Stimmen verstärken Polarisierung
+:::
+:::
+
+::: footer
+Bail et al. [2018](https://www.pnas.org/content/115/37/9216)
+:::
+
+
+## Und was ist mit KI?
+
+![](images/williams2024.png){width="400"}
+
+1. Nur weil es mehr gibt, wird nicht mehr konsumiert
+
+2. Nur weil es hochwertig produziert ist, ist es nicht wahr
+
+3. Nur weil es personalisiert ist, überzeugt es nicht
+
+$\rightarrow$ KI hat gleichzeitig auch Potenzial für Qualitätsmedien!
+
+::: footer
+Simon et al., [2023](https://ora.ox.ac.uk/objects/uuid:bfa56657-6e42-4839-876f-26eabd9807b3); Williams[2024](https://www.conspicuouscognition.com/p/ai-based-disinformation-is-probably)
+
+::: 
+
+
+## Zuletzt: Russland?!
+
+-   Russische Desinformation erreicht kleine Teile der Gesellschaft
+
+-   Engagement mit russischer Desinformation ist gering, im Vergleich zu anderem Content
+
+-   Es gibt keine Beweise dafür, dass damit Einstellungen oder Wahlen beeinflusst wurden
+
+::: footer
+Badawy et al., [2019](https://link.springer.com/article/10.1007/s13278-019-0578-6);
+Budak et al., [2024](https://www.nature.com/articles/s41586-024-07417-w);
+Eady et al., [2023](https://www.nature.com/articles/s41467-022-35576-9);
+Watts et al., [2017](https://www.cjr.org/analysis/fake-news-media-election-trump.php)
+
+::: 
+
+## Zusammenfassung
+
+1.   Misinformation ist _weniger verbreitet_ als im öffentlichen Diskurs angenommen
+
+2.   Der Ursprung von Misinformation liegt _nicht_ in sozialen Medien, inklusive Algorithmen und KI
+
+3.   Die Gefahren von russischer Desinformation werden _überschätzt_
+
+$\rightarrow$ Menschliche Tendenzen werden ausgespielt und verstärkt
+
+$\rightarrow$ Misinformation überlappt mit anderen gesellschaftlichen Problemen
+
+
+
+::: footer
+Avram et al., [2020](https://doi.org/10.37016/mr-2020-033); Bail, [2020](https://press.princeton.edu/books/paperback/9780691241401/breaking-the-social-media-prism?_gl=1*1sm9nvg*_up*MQ..*_ga*OTczODAyMzg1LjE3MTUxNzY3NDE.*_ga_N1W9JWKLY3*MTcxNTE3Njc0MC4xLjAuMTcxNTE3Njc0MC4wLjAuMjA1NDI4OTg1OQ); Lazer et al., [2018](https://doi.org/10.1126/science.aau2706); Mosleh et al., [2024](https://doi.org/10.1093/pnasnexus/pgae111); Watts et al., [2021](https://doi.org/10.1126/science.aau2706)
+:::
+
+::: notes
+-   Es ist sehr schwer zu messen, ob soziale Medien die Verbreitung von Misinformation verschlimmern und die Forschung ist sich da uneinig
+-   Grundsätzlich hat Misinformation aber schon lange lange vor den sozialen Medien existiert
+-   Aber es gibt Mechanismen, die offline existieren, die durch algorithmische Systeme in sozialen Medien eventuell verstärkt werden und zur Verbreitung von Misinformation führen
+-   Zum Beispiel erwecken negative Nachrichten und Popularitätssignale with Likes Aufmerksamkeit von User:innen, sodass der Content dann wiederum algorithmisch hervorgehoben wird, was wiederum zu mehr Popularität führt
+-   Oft ist das Content, der von User:innen produziert wird, die sehr extrem und aktiv ihre Meinung kundtun
+-   Daher überlappt die Verbreitung von Misinformation stark; Misinformation ist oft hasserfüllt, und hetzt gegen andere Gruppen
+:::
+
+# Diskussion
+
+::: notes
+
+Ist Misinformation wirklich das größte Problem, das wir gerade haben? Oder ist es eher ein Symptom?
+
+Wer ist in der Verantwortung?
+
+:::
+
+## Unterbrechung 
+
+![](images/singh2024.png)
+
+# Der Faktor Mensch
+
+# Warum glauben Menschen an Misinformation?
+
+## Manche Menschen fallen einfach drauf rein
+
+![](images/ecker-halb.png){width="400"}
+
+::: footer
+Ecker et al., [2023](https://www.nature.com/articles/s44159-021-00006-y); Mercier, [2020](https://press.princeton.edu/books/hardcover/9780691178707/not-born-yesterday)
+:::
+
+::: notes
+-   Aus den Kognitionswissenschaften kommt die Theorie, dass es zwei Modi der Informationsverarbeitung gibt
+
+-   Das basiert auf dem Psychologen Daniel Kahnemann, demnach man Informationen schnell und einfach verarbeiten kann oder rational und elaboriert
+
+-   So kommt es dazu, dass Menschen in verschiedenen Situationen unterschiedlich gut darin sind, logisch zu denken und Misinformation zu erkennen
+
+-   Hier ist die Annahme, dass den Menschen etwas fehlt, kritisches Denken, Aufmerksamkeit oder Fähigkeiten
+
+-   Aber Menschen sind grundsätzlich skeptisch gegenüber neuen Informationen und sind dazu in der Lage, neues mit bisherigem Wissen abzugleichen
+:::
+
+
+## Machen Emotionen Menschen dumm? Nein!
+
+-   Mehr Wut und weniger Freude in Reaktion auf Misinformation
+
+![](images/curvi-linear.svg){width="2000"}
+
+::: fragment
+-   Menschen mit **guter und schlechter Urteilsfähigkeit** werden wütend
+
+$\rightarrow$ Funktion von Emotionen hängt von existierenden Einstellungen ab
+:::
+
+::: footer
+Luehring\*, Shetty\*, et al., [2023](https://psyarxiv.com/udqms/)
+:::
+
+::: notes
+-   In Experimenten aber auch wenn wir uns Daten aus sozialen Medien anschauen sehen wir immer dasselbe Muster: mehr Wut und weniger Freude
+-   Aber: Emotionen machen nicht grundsätzlich dumm
+-   Insbesondere bei Aufständen von diskriminierten Minderheiten stigmatisiert
+-   In einer Studie haben wir herausgefunden, dass Menschen die an Misinformation glauben wütend werden, aber auch Menschen die gut darin waren es zu erkennen
+-   Die haben dann sowas gesagt wie "Bullshit"
+-   Also sehen wir auch hier dass die Effekte von Misinformation von existierenden Einstellungen abhängen
+-   Und in einer anderen Studie, die ich gerade durchführe sehen wir, dass Emotionen in Misinformation einfach gespiegelt werden 
+:::
+
+
+## Menschen sind nicht dumm!
+
+![](images/ecker.png){width="800"}
+
+$\rightarrow$ politische oder soziale Motivation
+
+$\rightarrow$ politische Asymmetrie
+
+::: footer
+Bail, [2020](https://press.princeton.edu/books/paperback/9780691241401/breaking-the-social-media-prism?_gl=1*1sm9nvg*_up*MQ..*_ga*OTczODAyMzg1LjE3MTUxNzY3NDE.*_ga_N1W9JWKLY3*MTcxNTE3Njc0MC4xLjAuMTcxNTE3Njc0MC4wLjAuMjA1NDI4OTg1OQ); Bor & Petersen, [2021](https://www.cambridge.org/core/journals/american-political-science-review/article/abs/psychology-of-online-political-hostility-a-comprehensive-crossnational-test-of-the-mismatch-hypothesis/C721597EEB77CC8F494710ED631916E4); Ecker et al., [2023](https://www.nature.com/articles/s44159-021-00006-y); Petersen et al., [2020](https://psyarxiv.com/6m4ts/).
+:::
+
+::: notes
+-   Aber, wenn bisheriges Wissen schon verzerrt ist, gibt es keine guten Abwehrmechanismen mehr
+
+-   Viel wahrscheinlicher ist daher, dass eine motivierte Minderheit schon bestimmte Einstellungen hat Misinformation konsumiert und verbreitet 
+
+-   Menschen tendieren grundsätzlich dazu, Informationen herauszusuchen und zu verarbeiten, die mit ihren Einstellungen oder ihren sozialen Zirkeln übereinstimmen
+
+-   Diese Prozess nennt man "Motivated Reasoning"
+
+-   Deshalb ist der stärkste Faktor, warum Menschen an Misinformation glauben ihre politische Einstellung 
+
+-   Bei ganz extremen User:innen geht es auch oft nicht mehr um den Wahrheitsgehalt, sondern um den Protest
+
+-   Menschen teilen falsche Informationen, um Chaos zu stiften oder um einen Punkt zu machen
+
+-   Aber, Misinformation ist tendenziell ein rechtes Problem
+
+-   Viele Verschwörungstheorien kommen aus antisemitischen Kreisen
+
+-   Dahinter stecken oft rechtsextreme Einstellungen, Misstrauen in die Medien und demokratische Institutionen 
+
+:::
+
+
+## Soziale Dynamiken in den sozialen Medien
+
+::: columns
+::: {.column width="30%"}
+![](https://cdn.pixabay.com/photo/2022/01/07/01/21/girl-6920625_1280.jpg)
+
+<br> ![](https://images.fineartamerica.com/images-medium-large/chimpanzee-alpha-male-western-uganda-suzi-eszterhas.jpg)
+:::
+
+::: {.column width="70%"}
+-   Soziale Identitäten ausprobieren
+-   Uns selbst und andere verstehen
+-   Mehr Kontakt mit andersartigen Menschen ohne Kontextverständnis
+
+### Suche nach sozialem Status
+
+-   Keine Konsequenzen von aggressivem Verhalten
+-   Wettbewerb von Gruppen
+:::
+:::
+
+::: footer
+Metzler & Garcia [2023](https://doi.org/10.1177/17456916231185057); Bail [2021](https://press.princeton.edu/books/hardcover/9780691203423/breaking-the-social-media-prism); Brady et al. [2020](https://doi.org/10.1177/1745691620917336)
+:::
+
+## Soziale Medien verzerren die Wirklichkeit
+
+::: columns
+::: {.column width="30%"}
+![](images/bail_book.avif){width="300"}
+:::
+
+::: {.column width="70%"}
+-   Extreme Meinungen sind sichtbar
+-   Status für politisch Motivierte
+    -   Bsp links: Doomsday, Degrowth
+    -   Bsp rechts: Windkraft Proteste, Armut
+-   Moderate melden sich nicht zu Wort
+    -   Bsp: Klimawandel + Wirtschaft
+
+### Scheinbare Polarisierung
+
+$\rightarrow$ Wahrgenommene politische Spaltung verstärkt die **emotionale Polarisierung**
+:::
+:::
+
+::: footer
+Törnberg [2022](https://www.pnas.org/doi/10.1073/pnas.2207159119); Bail [2021](https://press.princeton.edu/books/hardcover/9780691203423/breaking-the-social-media-prism)
+:::
+
+
+
+## Mögliche Konsequenzen von Misinformation
+
+### Auf individueller Ebene
+
+-   kognitiv (Effekte auf Wissen)
+
+-   *einstellungsbezogen (Effekte auf Meinungen)???*
+
+-   emotional (Effekte auf Gefühle)
+
+-   *Verhalten???*
+
+### $\rightarrow$ sehr limitierte Effekte!
+
+::: footer
+Altay et al., [2023](https://doi.org/10.1177/20563051221150412); Guess et al., [2022](https://doi.org/10.37016/mr-2020-004); Moeller et al., [2020](https://www.die-medienanstalten.de/fileadmin/user_upload/die_medienanstalten/Service/Ver%C3%B6ffentlichungen/Gutachten/GVK_Gutachten_final_WEB_bf.pdf)
+:::
+
+::: notes
+-   Daher würde ich diese Effekte relativieren und sagen, dass es kaum Effekte auf die Allgemeinheit gibt, aber sehr starke Effekte auf kleine Gruppen, die sowieso schon anfällig dafür sind
+-   Gleichzeitig sehen wie wir in dem Ranking ganz am Anfang, dass Misinformation als großes Risiko wahrgenommen wird und dass Menschen zunehmend verunsichert sind (sekundäre Effekte)
+-   Wir gucken jetzt mal warum das so ist
+:::
+
+## Mögliche Konsequenzen von Misinformation
+
+### Auf gesellschaftlicher Ebene
+
+-   gruppenbezogene Wahrnehmungsverzerrungen
+
+-   Mobilisierung und Spaltung durch die oft extremen Inhalte
+
+-   Zynismus
+
+-   Verringertes Vertrauen in die Medien und demokratische Institutionen
+
+::: footer
+Scheufele et al., [2020](https://issues.org/covid-19-communication-war/); van der Meer et al., [2023](https://doi.org/10.1080/1461670X.2023.2187652); Weikmann et al., [2024](https://doi.org/10.1177/19401612241233539)
+:::
+
+::: notes
+-   Die gesamtgesellschaftlichen Konsequenzen sind dafür umso folgenreicher
+
+-   Misinformation kann die Wahrnehmung von ganzen Gruppen verzerren, das ist das was wir zu Corona-Zeiten in den Nachrichten gesehen haben
+
+-   Es kann zu Mobilisierungs- und Spaltungsprozessen beitragen
+
+-   Und weil es oft bestimmte Weltansichten und Inhalte pushed, kann es zur Zynismus führen
+
+-   Aber Debatten um die Glaubwürdigkeit von Information führen gesamtgesellschaftlich zu verringertem Vertrauen in die Medien
+:::
+
+# Was können wir tun?
+
+## Interventionen: Prebunking
+
+$\rightarrow$ Menschen sind nicht dumm! Argumente wirken, aber nur dort, wo die oft guten Gründe liegen
+
+::: columns
+::: {.column width="50%"}
+-   Accuracy nudges
+
+-   Medienkompetenz
+
+    -   logikbasiert
+
+    -   gamified, z.B. [Go Viral!](https://inoculation.science/inoculation-games/go-viral/) oder [Bad News](https://inoculation.science/inoculation-games/bad-news/)
+:::
+
+::: {.column width="40%"}
+![](images/covid-banner.jpg){width="300"}
+:::
+:::
+
+::: footer
+Lewandowsky & van der Linden [2021](https://www.tandfonline.com/doi/abs/10.1080/10463283.2021.1876983); van der Meer et al., [2023](https://www.tandfonline.com/doi/full/10.1080/1461670X.2023.2187652).
+:::
+
+::: notes
+-   Nudges sind Warnhinweise oder so Banner wie man es im Kontext von COVID gesehen hat
+
+-   Das passiert aber nur bei bestimmten Themen, zum Nahostkonflikt nicht 
+:::
+
+
+
+## Interventionen: Debunking
+
+-   Factchecking
+
+    -   Expert:innen: unabhängige Organisationen (mimikama, Correctiv) oder als Teil von Redaktionen (APA, faktenfinder)
+
+    -   Crowdsourced: Birdwatch
+
+
+::: footer
+Allen et al., [2022](https://dl.acm.org/doi/abs/10.1145/3491102.3502040); Altay, [2022](https://psyarxiv.com/sm3vk/); Hameleers & van der Meer, [2020](https://journals.sagepub.com/doi/full/10.1177/0093650218819671).
+:::
+
+::: notes
+-   politische Akteur:innen werden von unabhängigen Organisationen überprüft
+-   aber: preaching to the choir?
+-   crowdsourced factchecking macht es skalierbar, aber ist das gut für den politischen Zusammenhalt?
+-   automatisierte Verfahren scheitern leider 
+:::
+
+## Interventionen: Systemisch
+
+-   Transparenzpflichten und Regulierung von sozialen Medien und Suchmaschinen (z.B. EU Digital Services Act)
+
+-   Soziale Medien für bestimmte Zwecke designen (Entertainment, politischer Diskurs, Vernetzung, ...)
+
+      - Anonymität aufheben, Übereinstimmung betonen, usw.
+
+-   Stärkung von unabhängigen Medien und zuverlässigen Informationen
+
+-   Politische Bildung und Extremismus-Prävention
+
+::: fragment
+### $\rightarrow$ Vertrauen gewinnen!
+:::
+
+::: notes
+-   soziale Medien: Algorithmen auditen, Daten freigeben
+-   Medien: Länder mit öffentlich-rechtlichem haben weniger ein Problem mit Misstrauen in die Medien, und Länder mit Korruption ein größeres Problem
+-   Vertrauen in die Medien schaffen und die Radikalisierung von politischen Gruppen reduzieren
+:::
+
+## Was können **Sie** tun?
+-   Zuhören und Nachfragen: Ausgrenzung hat gegenteilige Effekte!
+-   Über [persönliche Erfahrungen](https://www.pnas.org/doi/10.1073/pnas.2008389118) & [Nicht-Politisches](https://doi.org/10.1093/poq/nfy014) sprechen
+-   [Werte/Weltsicht](https://doi.org/10.1111/spc3.12501) berücksichtigen
+-   Argumente wirken!
+    -   Ursachen des Klimawandels erklären erhöht [Akzeptanz von Maßnahmen](https://doi.org/10.1146/annurev-publhealth-090419-102409)
+
+::: footer
+Lewandowsky [2021](https://doi.org/10.1146/annurev-publhealth-090419-102409); Bail [2021](https://press.princeton.edu/books/hardcover/9780691203423/breaking-the-social-media-prism)
+:::
+
+# Abschluss
+
+## Letzte Worte
+
+-   Soziale Medien treiben scheinbare Polarisierung an
+
+-   Soziale Faktoren wirken stärker als KI
+
+-   Menschen sind nicht dumm: Sorgen ernst nehmen, Gründe verstehen, und diskutieren
+
+-   Reale Probleme lösen & transparente Erklärungen anbieten
+
+
+## Für Neugierige
+
+### Bücher
+
+::: columns
+
+::: {.column width="50%"}
+```{r, echo=FALSE, out.width=200}
+knitr::include_graphics("images/mercier_book.jpeg")
+```
+
+[Mercier, 2020](https://www.jstor.org/stable/j.ctvn1tbqq) Falschinformation & Propaganda
+:::
+
+::: {.column width="50%"}
+```{r, echo=FALSE, out.width=200}
+knitr::include_graphics("images/bail_book.avif")
+```
+
+[Bail, 2021](https://www.chrisbail.net/nm) Polarisierung & Social Media
+:::
+:::
+
+##  {.smaller}
+
+::: columns
+::: {.column width="50%"}
+### Für Zwischendurch
+
+[Kurzgesagt Video](https://youtu.be/fuFlMtZmvY0?si=lU02lQlj1J8OrSKG)
+
+```{r}
+knitr::include_graphics("images/in_a_nutshell.png")
+```
+
+[Podcast](https://www.derstandard.at/story/3000000218043/wahrheit-gegen-luege-die-psychologie-hinter-fake-news)
+
+```{r}
+knitr::include_graphics("images/derstandard_podcast.png")
+```
+:::
+
+
+::: {.column width="50%"}
+
+<br>
+
+[Singh, 2024](https://www.newyorker.com/magazine/2024/04/22/dont-believe-what-theyre-telling-you-about-misinformation) (The New Yorker)
+
+```{r, fig.align='right'}
+knitr::include_graphics("images/singh2024.png")
+```
+
+[Williams, 2024](https://www.conspicuouscognition.com/p/ai-based-disinformation-is-probably) (University of Sussex)
+
+```{r, fig.align='right'}
+knitr::include_graphics("images/williams2024.png")
+```
+:::
+:::
+
+::: footer
+:::
+
+
+## Vielen Dank!
+
+
+
+
+
