@@ -17,7 +17,7 @@ format:
 #     data-background-size: cover
 #     data-background-opacity: "0.5"
 logo: "logos/uni_wien_logo_blue.jpg"
-# editor: visual # visual editor
+editor: visual # visual editor
 ---
 
 ## Misinformation und Fake News in den Sozialen Medien
