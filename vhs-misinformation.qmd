@@ -857,11 +857,12 @@ knitr::include_graphics("images/williams2024.png")
 :::
 :::
 
-::: footer
-:::
-
 
 ## Vielen Dank!
+
+Die Präsentationsfolien zum Nachschauen:
+
+![](images/qrcode_julaluehring.github.io.png){width="500"}
 
 
 
