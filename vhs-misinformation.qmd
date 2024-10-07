@@ -7,6 +7,7 @@ format:
   revealjs:
     seal: false
     transition: "slide"
+    background-transition: "fade"
     theme: [default, custom.scss] #custom style file
     # incremental: true
     aspect-ratio: 16:9
@@ -103,9 +104,6 @@ Informatik, Physik
 ::: notes
 Haben Sie schon einmal von Computational Social Science gehört?
 Wir stellen sozialwissenschaftliche Fragen, aber nutzen in der Regel Methoden der Informatik oder der Physik um sie zu beantworten.
-D.h., wir fragen uns jetzt: wie verbreitet ist Misinformation?
-Und anstatt von Umfragen oderaber zusätzlich dazu, verfolgen wir dann computergestützte Ansätze und analysieren Social Media-Daten
-Und wenn wir uns fragen, wie wir die Verbreitung von Misinformation eindämmen können, dann programmieren wir Computersimulationen, in denen wir Interventionen testen können
 :::
 
 ## Misinformation
@@ -135,6 +133,9 @@ $\rightarrow$ Politikwissenschaften
 
 :::
 
+::: notes
+D.h., wir fragen uns jetzt: wie verbreitet ist Misinformation? Und anstatt von Umfragen oderaber zusätzlich dazu, verfolgen wir dann computergestützte Ansätze und analysieren Social Media-Daten Und wenn wir uns fragen, wie wir die Verbreitung von Misinformation eindämmen können, dann programmieren wir Computersimulationen, in denen wir Interventionen testen können
+:::
 
 # Was ist Misinformation?
 
@@ -168,7 +169,11 @@ $\rightarrow$ Politikwissenschaften
 -   Hier wird Misinformation in der Regel als unwahre oder falsche Informationen bezeichnet, die keine bestimmte Intention hat
 :::
 
-## Subtypen
+## Subtypen {visibility="hidden"}
+
+---
+hidden: true
+---
 
 
 -   Zwei Dimensionen: Intention vs. Wahrheitsgehalt
@@ -197,6 +202,11 @@ Beispiel 1: Unüberprüftes Teilen von Informationen
 
 $\rightarrow$ unabsichtliche Fehler
 
+::: footer
+Poynter, [2019](https://www.poynter.org/fact-checking/2019/madonna-leonardo-dicaprio-cristiano-ronaldo-and-emmanuel-macron-didnt-fact-check-before-posting-images-about-the-amazon-fires/)
+
+:::
+
 ## Wie sieht das in der Praxis aus?
 
 Beispiel 2: Falsche Zeugenaussagen
@@ -205,6 +215,12 @@ Beispiel 2: Falsche Zeugenaussagen
 
 $\rightarrow$ dekontextualisierende Interpretationen
 
+::: footer
+
+Deutschlandfunk, [2017](https://www.deutschlandfunk.de/silvesternacht-in-frankfurt-polizei-dementiert-bild-bericht-100.html)
+
+:::
+
 ## Wie sieht das in der Praxis aus?
 
 Beispiel 3: Pseudojournalismus
@@ -212,6 +228,12 @@ Beispiel 3: Pseudojournalismus
 ![](images/voice-of-europe.png){width="700"}
 
 $\rightarrow$ politisch motivierte Desinformationskampagnen
+
+::: footer
+
+Europäische Kommission, [2024](https://ec.europa.eu/commission/presscorner/detail/de/ip_24_2682)
+
+:::
 
 # Wie verbreitet ist Misinformation? 
 
@@ -222,7 +244,7 @@ $\rightarrow$ politisch motivierte Desinformationskampagnen
 </iframe>
 
 
-## So denken andere darüber:
+## So denken andere darüber
 
 ![](images/WEF-wide.png){width="594"}
 
@@ -241,17 +263,13 @@ $\rightarrow$ politisch motivierte Desinformationskampagnen
 
 ![Altay et al., 2022](images/altay-spread.png){width="600"}
 
-\
 
-**[1-6%](https://journalqd.org/article/view/3617) in 5 Studien von 2016-2019**
+-   **1-6% in 5 Studien von 2016-2019**: kleiner Anteil des Online-Nachrichtenkonsums (in den USA!)
 
-$\rightarrow$ kleiner Anteil des Nachrichtenkonsums
-
-::: fragment
+-   in Krisen: Rückgriff auf zuverlässige Nachrichten
 
 ### $\rightarrow$ im Durschnitt gewinnen gute Nachrichten!
 
-:::
 
 ::: footer
 Allcott & Gentzkow, [2017](https://pubs.aeaweb.org/doi/10.1257/jep.31.2.211); Allen et al., [2020](https://doi.org/10.1126/sciadv.aay3539); Altay et al., [2022](https://journalqd.org/article/view/3617); Guess et al., [2020](https://www.nature.com/articles/s41562-020-0833-x)
@@ -271,11 +289,11 @@ Allcott & Gentzkow, [2017](https://pubs.aeaweb.org/doi/10.1257/jep.31.2.211); Al
 
 ## Und in den sozialen Medien? 
 
--   Minderheit der User teilt Großteil der Falschinformation:
-    -   1% User teilen 75% [(2018-2019, USA)](https://www.doi.org/10.1017/S0003055421000290)
-    -   5% User teilen 50% [(2016, USA)](https://www.sciencemag.org/lookup/doi/10.1126/science.aau2706)
-    -   2% machen 75% Website-Visits aus [(2022, Deutschland)](https://doi.org/10.1080/10584609.2024.2325426)
--   Falschinformation überlappt mit [Hassrede](https://doi.org/10.1093/pnasnexus/pgae111)
+-   Minderheit der Nutzer teilt Großteil der Misinformation:
+    -   1% Nutzer teilen 75% [(2018-2019, USA)](https://www.doi.org/10.1017/S0003055421000290)
+    -   5% Nutzer teilen 50% [(2016, USA)](https://www.sciencemag.org/lookup/doi/10.1126/science.aau2706)
+    -   2% Nutzer besuchen 75% Websites [(2022, Deutschland)](https://doi.org/10.1080/10584609.2024.2325426)
+-   Misinformation überlappt mit Konflikten zwischen sozialen Gruppen und damit zusammenhängender [Hassrede](https://doi.org/10.1093/pnasnexus/pgae111)
 
 ::: footer
 Brennen et al., [2020](https://reutersinstitute.politics.ox.ac.uk/types-sources-and-claims-covid-19-misinformation); Grinberg et al., [2019](https://doi.org/10.1126/science.aau2706); Osmundsen et al., [2021](https://www.cambridge.org/core/journals/american-political-science-review/article/abs/partisan-polarization-is-the-primary-psychological-motivation-behind-political-fake-news-sharing-on-twitter/3F7D2098CD87AE5501F7AD4A7FA83602); Robertson et al., [2023](https://www.nature.com/articles/s41586-023-06078-5); Törnberg, [2022](https://www.pnas.org/doi/10.1073/pnas.2207159119)
@@ -292,8 +310,8 @@ Brennen et al., [2020](https://reutersinstitute.politics.ox.ac.uk/types-sources-
 
 ### 1. Politiker 
 
--   Politiker teilen 20% der Fehlinformation.
--   Diese [20% verursachen 69% des Engagement](https://reutersinstitute.politics.ox.ac.uk/types-sources-and-claims-covid-19-misinformation) mit Fehlinformation auf Social Media.
+-   Politiker teilen 20% der Misinformation
+-   Verurachen wiederum [69% der Interaktionen](https://reutersinstitute.politics.ox.ac.uk/types-sources-and-claims-covid-19-misinformation) mit Misinformation in Sozialen Medien
 
 ![](images/afd_mimikama.png)
 
@@ -303,14 +321,14 @@ Brennen et al. [2020](https://reutersinstitute.politics.ox.ac.uk/types-sources-a
 
 ## Wer verbreitet Misinformation? 
 
-### 2. Sehr aktive, extreme User
+### 2. Sehr aktive, extreme Nutzer
 
 ::: columns
 ::: {.column width="50%"}
 ![](https://peoplesdispatch.org/wp-content/uploads/2021/01/trump-capitol-2.jpg){width="400"}
 
 -   [politisch Motivierte](https://www.doi.org/10.37016/mr-2020-119) mit extremen Einstellungen
--   [Auch offline feindselig](https://www.doi.org/10.1017/S0003055421000885), online sichtbarer
+-   [auch offline feindselig](https://www.doi.org/10.1017/S0003055421000885), online sichtbarer
 :::
 
 ::: {.column width="50%"}
@@ -319,12 +337,9 @@ Brennen et al. [2020](https://reutersinstitute.politics.ox.ac.uk/types-sources-a
 
 -   Verlust von Status & Privileg
 -   Frustration im echten Leben
--   Kein Vertrauen in Institutionen
--   Keine Repräsentation
+-   kein Vertrauen in Institutionen
+-   kaum Repräsentation
 
-::: fragment
-### $\rightarrow$ Mensch oder Algorithmus?
-:::
 
 :::
 :::
@@ -350,11 +365,11 @@ Altay et al. [2023](https://www.doi.org/10.37016/mr-2020-119); Bor & Petersen [2
 :::
 
 ::: {.column width="70%"}
--   Echokammern: offline [stärker](https://doi.org/10.1093/qje/qjr044) als online
--   [Ausmaß](https://www.nature.com/articles/s41586-023-06297-w) variiert stark
-    -   **20.6%** Facebook User: **75%** der Posts aus gleichgesinnten Quellen
-    -   **23.1%**: unter **25%** der Posts
--   Algorithmen: kleiner (6%) & viel weniger starker [Einfluss](https://www.science.org/doi/full/10.1126/science.aaa1160) als soziales Netzwerk
+-   [Echokammern:](https://doi.org/10.1093/qje/qjr044) offline stärker als online
+-   Ausmaß variiert stark, z.B. auf [Facebook:](https://www.nature.com/articles/s41586-023-06297-w)
+    -   **20.6%** Nutzer: **75%** der Inhalte aus gleichgesinnten Quellen
+    -   **23.1%** Nutzer: unter **25%** der Inhalte
+-   [Algorithmen](https://www.science.org/doi/full/10.1126/science.aaa1160): kleiner (6%) & weniger starker Einfluss als soziales Netzwerk
 -   [Gruppen & Pages](https://www.science.org/doi/10.1126/science.ade7138): stark segregiert
 :::
 :::
@@ -370,39 +385,65 @@ Gentzkow & Shapiro, [2011](https://doi.org/10.1093/qje/qjr044); Bakshy et al. [2
 
 ## Können wir Algorithmen für schuldig erklären? 
 
-Facebook [Studie](https://www.nature.com/articles/s41586-023-06297-w): Down-Ranking von gleichgesinnten Posts
+Down-Ranking von gleichgesinnten Inhalten auf Facebook:
 
-![](images/Nyhan_2023.svg)
+::: columns 
+::: {.column width="40%"}
+
+<br>
+
+-   weniger Misinformation & Hassrede
+
+-   Nutzer suchen auf andere Weise gleichgesinnte Inhalte
+ 
+:::
+
+::: {.column width="60%"}
+
+<br> 
+
+![](images/Nyhan_2023.svg){.r-stretch}
+
+:::
+:::
 
 ::: footer
 Nyhan et al., [2023](https://www.nature.com/articles/s41586-023-06297-w)
-:::
-
-## Algorithmus: Down-Ranking gleichgesinnter Quellen
-
-![](images/Nyhan_2023_results_Fig3_a_d.svg){.r-stretch}
-
--   Ähnliche Ergebnisse in 2 weiteren Studien: <br> [Kein Algorithmus](https://www.science.org/doi/full/10.1126/science.abp9364) oder [keine Re-Shares](https://www.science.org/doi/10.1126/science.add8424)
-
-::: footer
-Nyhan et al., [2023](https://www.nature.com/articles/s41586-023-06297-w); Guess et al., [2023](https://www.science.org/doi/full/10.1126/science.abp9364); Guess et al., [2023](https://www.science.org/doi/10.1126/science.add8424)
 :::
 
 ::: notes
 Schimpfworte etc. Reduction: from 0.034% to 0.030% for content with slur words from 3.15% to 2.81% for uncivil content from 0.76% to 0.55% for content from misinformation repeat offenders
 :::
 
+## Mensch > Algorithmus
+
+![](images/Nyhan_2023_results_Fig3_a_d.svg){.r-stretch}
+
+-   mehr Misinformation [ohne Algorithmus](https://www.science.org/doi/full/10.1126/science.abp9364) 
+
+-   weniger Misinformation [ohne Reshares](https://www.science.org/doi/10.1126/science.add8424)
+
+::: footer
+Nyhan et al., [2023](https://www.nature.com/articles/s41586-023-06297-w); Guess et al., [2023](https://www.science.org/doi/full/10.1126/science.abp9364); Guess et al., [2023](https://www.science.org/doi/10.1126/science.add8424)
+:::
+
+
+
 ## Algorithmen & Radikalisierungspiralen?
 
--   Einfluss von [Google's Algorithmus](https://www.nature.com/articles/s41586-023-06078-5) auf Ergebnisse: Suchworte haben viel stärkeren Effekt
+[Google:](https://www.nature.com/articles/s41586-023-06078-5) Suchworte haben stärkeren Effekt als Vorschläge durch Algorithmus
 
 ![](images/google.png)
 
--   YouTube: Algorithmus führt zu [weniger radikalem Konsum](https://www.pnas.org/doi/abs/10.1073/pnas.2313377121)
--   Klicks für radikale Videos: von [außerhalb der Platform](https://doi.org/10.1177/1940161220964767)
--   [User Präferenzen](https://www.pnas.org/doi/abs/10.1073/pnas.2101967118) bestimmen Views von radikalen Videos
+::: fragment
+[YouTube:](https://www.pnas.org/doi/abs/10.1073/pnas.2313377121) Algorithmus führt zu weniger radikalem Konsum
 
-$\rightarrow$ User suchen aktiv gleichgesinnte Inhalte
+-   Angebot/Nachfrage existiert [außerhalb der Platform](https://doi.org/10.1177/1940161220964767)
+-   [Nutzer-Präferenzen](https://www.pnas.org/doi/abs/10.1073/pnas.2101967118) bestimmen Klicks von radikalen Videos
+
+$\rightarrow$ Nutzer suchen aktiv gleichgesinnte Inhalte
+
+:::
 
 ::: footer
 Robertson et al., [2023](https://www.nature.com/articles/s41586-023-06078-5); Hosseinmardi et al., [2024](https://www.pnas.org/doi/abs/10.1073/pnas.2313377121); Hosseinmardi et al., [2021](https://www.pnas.org/doi/abs/10.1073/pnas.2101967118); Munger & Philipps, [2022](https://doi.org/10.1177/1940161220964767)
@@ -410,7 +451,7 @@ Robertson et al., [2023](https://www.nature.com/articles/s41586-023-06078-5); Ho
 
 ## Echokammern reduzieren? Keine gute Idee.
 
--   Politische Polarisierung in den USA ([Studie 2017](https://www.pnas.org/content/115/37/9216))
+Untersuchung von politischer Polarisierung in den USA
 
 ::: columns
 ::: {.column width="50%"}
@@ -418,8 +459,8 @@ Robertson et al., [2023](https://www.nature.com/articles/s41586-023-06078-5); Ho
 :::
 
 ::: {.column width="50%"}
--   Posts von Meinungsführern der anderen Partei
--   Einstellungen wurden extremer, besonders in Republikanern
+-   mehr Inhalte von Meinungsführern der anderen Partei
+-   Einstellungen wurden extremer, besonders bei Republikanern
 -   Extreme Stimmen verstärken Polarisierung
 :::
 :::
@@ -449,11 +490,27 @@ Simon et al., [2023](https://ora.ox.ac.uk/objects/uuid:bfa56657-6e42-4839-876f-2
 
 ## Zuletzt: Russland?!
 
--   Russische Desinformation erreicht kleine Teile der Gesellschaft
+::: columns
 
--   Engagement mit russischer Desinformation ist gering, im Vergleich zu anderem Content
+::: {.column width="50%"}
 
--   Es gibt keine Beweise dafür, dass damit Einstellungen oder Wahlen beeinflusst wurden
+-   Russische Desinformation erreicht nur kleine Teile der Gesellschaft
+
+-   Interaktionen sind gering, insbesondere im Vergleich zu anderen Inhalten
+
+
+:::
+
+::: {.column width="50%"}
+
+![](https://euvsdisinfo.eu/uploads/2024/09/RT_article_cover-1200x675.webp)
+
+:::
+
+
+-   Es gibt **keine** Beweise dafür, dass russische Desinformation Einstellungen oder Wahlen beeinflusst wurden
+
+:::
 
 ::: footer
 Badawy et al., [2019](https://link.springer.com/article/10.1007/s13278-019-0578-6);
@@ -807,7 +864,7 @@ Lewandowsky [2021](https://doi.org/10.1146/annurev-publhealth-090419-102409); Ba
 knitr::include_graphics("images/mercier_book.jpeg")
 ```
 
-[Mercier, 2020](https://www.jstor.org/stable/j.ctvn1tbqq) Falschinformation & Propaganda
+[Mercier, 2020](https://www.jstor.org/stable/j.ctvn1tbqq) Misinformation & Propaganda
 :::
 
 ::: {.column width="50%"}
@@ -815,7 +872,7 @@ knitr::include_graphics("images/mercier_book.jpeg")
 knitr::include_graphics("images/bail_book.avif")
 ```
 
-[Bail, 2021](https://www.chrisbail.net/nm) Polarisierung & Social Media
+[Bail, 2021](https://www.chrisbail.net/nm) Polarisierung & Soziale Medien
 :::
 :::
 
