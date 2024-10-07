@@ -612,7 +612,7 @@ Ecker et al., [2023](https://www.nature.com/articles/s44159-021-00006-y); Mercie
 -   Aber Menschen sind grundsätzlich skeptisch gegenüber neuen Informationen und sind dazu in der Lage, neues mit bisherigem Wissen abzugleichen
 :::
 
-## Aber Menschen sind eher skeptisch
+## Menschen sind grundsätzlich eher skeptisch
 
 ::: columns
 ::: {.column width="30%"}
@@ -647,7 +647,7 @@ Mercier, [2020](https://press.princeton.edu/books/hardcover/9780691178707/not-bo
 
 
 
-## Machen Emotionen Menschen dumm? Nein!
+## Machen Emotionen dumm? Nein!
 
 ![](images/curvi-linear.svg){.r-stretch}
 
