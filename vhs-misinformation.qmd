@@ -691,7 +691,7 @@ $\rightarrow$ politische Asymmetry
 <br>
 <br>
 
-![](images/nikolov.png){width="1000"}
+![](images/Nikolov.png){width="1000"}
 
 :::
 
@@ -759,7 +759,7 @@ Metzler & Garcia, [2023](https://doi.org/10.1177/17456916231185057); Bail, [2021
 
 ::: columns
 ::: {.column width="30%"}
-![](images/bail_book.avif){width="300"}
+![](images/bail_book.png){width="300"}
 :::
 
 ::: {.column width="70%"}
@@ -947,7 +947,7 @@ knitr::include_graphics("images/mercier_book.jpeg")
 
 ::: {.column width="50%"}
 ```{r, echo=FALSE, out.width=200}
-knitr::include_graphics("images/bail_book.avif")
+knitr::include_graphics("images/bail_book.png")
 ```
 
 [Bail, 2021](https://www.chrisbail.net/nm) Polarisierung & Soziale Medien
